@@ -1,0 +1,30 @@
+/* STYLES FOR THE WHOLE APP */
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: 0.25s;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+.blur-box:hover {
+    filter : hue-rotate(180deg)
+}
+
+.graph-surface canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.special-disabled {
+    width: 100%;
+    height: 58px;
+    z-index: 999999;
+    background-color: rgba(255, 255, 255, 0.85);
+    position: absolute;
+    top: 0;
+    left: 0;
+}

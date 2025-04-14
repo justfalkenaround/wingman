@@ -1,0 +1,13 @@
+/* STYLES FOR THE COMPONENT */
+
+canvas#image-cropper:hover {
+    cursor: grab;
+}
+
+canvas#image-cropper:active {
+    cursor: grabbing;
+}
+
+.max-target, .max-target canvas {
+    max-width: 100% !important;
+}

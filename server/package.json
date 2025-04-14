@@ -1,0 +1,32 @@
+{
+  "name": "WingMan",
+  "version": "2.0.0",
+  "description": "A dating app powered by A.I.",
+  "main": "app/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "cd ../client;npm run build;cd ../server;node app/cluster",
+    "production": "cd ../client;npm run build;cd ../server;NODE_ENV=production node app/cluster",
+    "devstart": "nodemon app/cluster --trace-sync-io",
+    "dump": "mongodump --db=wing_man",
+    "restore": "mongo wing_man --eval 'printjson(db.dropDatabase())';mongorestore --db=wing_man dump/wing_man",
+    "seed": "mongo wing_man --eval 'printjson(db.dropDatabase())' && mongoimport --db=wing_man --collection=cities --file=seed/seed_data_geo_data.json;mongoimport --db=wing_man --collection=photos --file=seed/seed_data_sample_photos.json;mongo wing_man --eval 'printjson(db.cities.createIndex({ city: \"text\", city_ascii: \"text\", country: \"text\", iso2: \"text\", iso3: \"text\", admin_name: \"text\" }))';mongo wing_man --eval 'printjson(db.profiles.createIndex({ coord: \"2dsphere\" }))'"
+  },
+  "author": "Falken Brown 3033275",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "formidable": "^3.5.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^6.0.11",
+    "morgan": "^1.10.0",
+    "portfinder": "^1.0.32",
+    "socket.io": "^4.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
