@@ -89,7 +89,7 @@ app.use((req, res, next) => {
     res.status(404);
     res.send(`
     <html>
-        <link rel='stylesheet' href='https://cdn.tlm.cloud/semantic-ui/2.4.1/semantic.min.css' integrity='sha384-YgbKRapHUUSMbq+ZTy6HzAc3nOtKW8oZRhS9lTj7hqfP716Y/fXkBZrN/ncXepKQ' crossorigin='anonymous'>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css' crossorigin='anonymous'>
         <div class='ui error message'>
             <div class='header'>Error: 404 Sorry I can't find anything at that url.</div>
             <p>Please check the url you are attempting to access.</p>
@@ -108,7 +108,7 @@ app.use((err, req, res, next) => {
     !err._object
         ? res.send(`
     <html>
-        <link rel='stylesheet' href='https://cdn.tlm.cloud/semantic-ui/2.4.1/semantic.min.css' integrity='sha384-YgbKRapHUUSMbq+ZTy6HzAc3nOtKW8oZRhS9lTj7hqfP716Y/fXkBZrN/ncXepKQ' crossorigin='anonymous'>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css' crossorigin='anonymous'>
         <div class='ui error message'>
             <div class='header'>Error: 500 Sorry, there has been an internal server error.</div>
             <p>Please check back again later or notify the developer.</p>

@@ -31,12 +31,12 @@ export const read_potentials = async (req, res, next) => {
             {
                 $geoNear:
                 {
-                    geoNear: 'profiles',
+                    // geoNear: 'profiles',
                     distanceField: 'distance',
                     spherical: true,
                     near: profile.coord,
                     maxDistance: Number(maxdist) || Infinity,
-                    limit: 5000,
+                    // limit: 5000,
                     key: 'coord'
                 }
             },

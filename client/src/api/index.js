@@ -45,7 +45,7 @@ export const uploadModel = async (model, tf = null) => {
     try {
         if (!tf) {
             await (async () => {
-                let ret = await fetch('https://cdn.tlm.cloud/tensor-flow/4.13.0/tf.min.js')
+                let ret = await fetch('https://cdnjs.cloudflare.com/ajax/libs/tensorflow/4.13.0/tf.min.js')
                 ret = await ret.text()
                 return eval(ret)
             })()
@@ -74,7 +74,7 @@ export const downloadModel = async (user_id, tf = null) => {
     try {
         if (!tf) {
             await (async () => {
-                let ret = await fetch('https://cdn.tlm.cloud/tensor-flow/4.13.0/tf.min.js')
+                let ret = await fetch('https://cdnjs.cloudflare.com/ajax/libs/tensorflow/4.13.0/tf.min.js')
                 ret = await ret.text()
                 return eval(ret)
             })()

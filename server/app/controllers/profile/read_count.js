@@ -24,7 +24,7 @@ export const read_count = async (req, res, next) => {
             {
                 $geoNear:
                 {
-                    geoNear: 'profiles',
+                    // geoNear: 'profiles',
                     distanceField: 'distance',
                     spherical: true,
                     near: profile.coord,

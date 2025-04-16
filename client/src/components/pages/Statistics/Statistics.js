@@ -26,7 +26,7 @@ const Statistics = props => {
             const _metrics = await readMetrics()
             /*_____ LOAD THE GRAPHING API _____*/
             await (async () => {
-                let ret = await fetch('https://cdn.tlm.cloud/tensor-flow/4.13.0/tfjs-vis.umd.min.js')
+                let ret = await fetch('https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.5.1/dist/tfjs-vis.umd.min.js')
                 ret = await ret.text()
                 return eval(ret)
             })()

@@ -108,7 +108,7 @@ const WorkerFunction = () => {
             self.hostname = message.data.hostname
             /*_____ AWAIT THE LOADING OF THE TENSORFLOW LIBRARY _____*/
             await (async () => {
-                let ret = await fetch('https://cdn.tlm.cloud/tensor-flow/4.13.0/tf.min.js')
+                let ret = await fetch('https://cdnjs.cloudflare.com/ajax/libs/tensorflow/4.13.0/tf.min.js')
                 ret = await ret.text()
                 return eval(ret)
             })()

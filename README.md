@@ -29,24 +29,6 @@ On this app you can sign up and match with other users around the world. The ide
 
 ## Research
 
-### Note To Grader:
-
-> Intermediate JavaScript Locations:
->
-> 1. Classes in the client/src/components/other/ErrorBoundary/ErrorBoundary.js, as well as other locations.
-> 2. Keyword "this" in the client/src/components/other/ErrorBoundary/ErrorBoundary.js, as well as other locations.
-> 3. Nested loop in client/src/components/pages/Match/MatchWorker.js, line 36 ".div(255)" is a nested loop call, if this doesn't count then I still have the other four items satisfied.
-> 4. .map() call in client/src/components/pages/Chats/Chats.js, line 29.
-> 5. The entire app uses a variety of data-structures, for a unique example see the tensors in the A.I worker code.
->
-> Get and Post Request Locations:
->
-> 1. server/app/routes/api/profile.js, plenty of routes here I would hope.
->
-> Font Families and Types:
->
-> 1. client/src/components/other/ErrorComponent/ErrorComponent.js has an example font-family different from that provided by semantic ui, this satisfies the rubric requirement for family and type. Two different families in the app, two different types.
-
 ### PRIMARY RESEARCH COMPONENT: Machine Learning with TensorFlow.js:
 
 > As the primary area of research for the second half of this year I chose Machine Learning with TensorFlow.js.
